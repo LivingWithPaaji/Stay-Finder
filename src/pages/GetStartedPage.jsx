@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCohereResponse } from '../components/cohereChat';
+import './GetStartedPage.css';
 
 const GetStartedPage = () => {
   const backgroundStyle = {
@@ -73,28 +73,22 @@ const GetStartedPage = () => {
     animation: 'fadeIn 0.8s ease-out',
   };
 
-  // Add keyframes for fadeIn
-  const keyframes = `@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }`;
-
   return (
-    <div style={backgroundStyle}>
-      <style>{keyframes}</style>
-      <div style={{ ...formContainerStyle, ...fadeInStyle }}>
-        <h1 style={titleStyle}>Get Started</h1>
-        <p style={subtitleStyle}>
+    <div className="get-started-page-container">
+      <div className="get-started-form-container">
+        <h1 className="get-started-title">Get Started</h1>
+        <p className="get-started-subtitle">
           Sign up to list your property and start hosting travelers.
         </p>
 
         <form>
-          <input type="text" placeholder="First name" style={inputStyle} />
-          <input type="text" placeholder="Last name" style={inputStyle} />
-          <input type="email" placeholder="Email" style={inputStyle} />
-          <input type="password" placeholder="Password" style={inputStyle} />
+          <input type="text" placeholder="First name" className="get-started-input" />
+          <input type="text" placeholder="Last name" className="get-started-input" />
+          <input type="email" placeholder="Email" className="get-started-input" />
+          <input type="password" placeholder="Password" className="get-started-input" />
           <button
             type="submit"
-            style={buttonStyle}
-            onMouseEnter={(e) => Object.assign(e.currentTarget.style, buttonHoverStyle)}
-            onMouseLeave={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
+            className="get-started-button"
           >
             List Up
           </button>
