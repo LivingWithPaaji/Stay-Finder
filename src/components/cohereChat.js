@@ -1,5 +1,5 @@
 // Insert your Cohere API key here
-const COHERE_API_KEY = 'ppe4rWY7Y6NY3uNm3rG01BRmVtm3qXbJS5MFrVmg';
+const COHERE_API_KEY = import.meta.env.VITE_COHERE_API_KEY;
 
 import { mockListings } from '../data/listings';
 
